@@ -38,6 +38,7 @@
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'chrisbra/Colorizer'
     Plug 'tpope/vim-surround'
+    Plug 'junegunn/goyo.vim'
     "Plug 'ap/vim-css-color'
     "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
@@ -61,6 +62,8 @@
     set expandtab
     set autoindent
     set fileformat=unix
+
+    set cursorline
 
     set background=dark
     "colorscheme onedark
@@ -113,5 +116,33 @@
     set spell
     nmap <F7> :set spell!<CR>
 
-    
-    endif
+    " Goyo mode detection and setup
+    function! s:goyo_enter()
+      if executable('tmux') && strlen($TMUX)
+        silent !tmux set status off
+        silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+      endif
+      set noshowmode
+      set noshowcmd
+      set scrolloff=999
+      set cursorline
+      " ...
+    endfunction
+
+    function! s:goyo_leave()
+      if executable('tmux') && strlen($TMUX)
+        silent !tmux set status on
+        silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+      endif
+      set showmode
+      set showcmd
+      set scrolloff=5
+      " ...
+      " making the background transparent
+      hi Normal ctermbg=NONE guibg=NONE
+      set cursorline
+    endfunction
+
+    autocmd! User GoyoEnter nested call <SID>goyo_enter()
+    autocmd! User GoyoLeave nested call <SID>goyo_leave()    
+endif
