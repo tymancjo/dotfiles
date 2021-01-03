@@ -475,7 +475,15 @@ alias mcc="terminology -e mc &"
 alias ht="terminology -e htop &"
 alias vim="nvim"
 alias vi="nvim"
+alias pdf="zathura"
+alias webcam0="cvlc v4l2:///dev/video0"
+alias webcam1="cvlc v4l2:///dev/video1"
+alias webcam2="cvlc v4l2:///dev/video2 :v4l2-width=1280 :v4l2-height=720 :v4l2-fps=60 :v4l2-rotate=-1"
+alias webcam3="cvlc v4l2:///dev/video3"
+alias webcam4="cvlc v4l2:///dev/video4"
+alias webcam5="cvlc v4l2:///dev/video5"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+
 
 clear
 ### EOF ###
