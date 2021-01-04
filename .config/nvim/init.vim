@@ -39,6 +39,8 @@
     Plug 'chrisbra/Colorizer'
     Plug 'tpope/vim-surround'
     Plug 'junegunn/goyo.vim'
+    " Markdown live preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
     "Plug 'ap/vim-css-color'
     "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
@@ -47,6 +49,12 @@
     syntax on  
     
     let g:python_highlight_all = 1 
+
+    " Markdown live preview setup
+    let g:mkdp_refresh_slow = 0
+    " specify browser to open preview page
+    " default: ''
+    let g:mkdp_browser = 'surf'
 
     "some sets as found online
     set encoding=utf-8

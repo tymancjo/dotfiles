@@ -10,7 +10,7 @@ font pango: Noto Sans 8
 floating_modifier $super
 
 #autostart
-exec --no-startup-id feh --bg-fill ~/Obrazy/backgrounds/wallpapers/0005.jpg
+exec --no-startup-id feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg
 
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
@@ -38,8 +38,9 @@ bindsym $super+Shift+w exec firefox
 bindsym $super+Shift+f exec terminology -e ranger;workspace 3;focus
 
 # bindings for second monitor
-bindsym $super+p exec xrandr --output DP1 --auto --above eDP1
+bindsym $super+p exec xrandr --output DP1 --auto --above eDP1 & feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg 
 bindsym $super+Control+p exec xrandr --output DP1 --off
+bindsym $super+Shift+p exec arandr 
 
 
 #change volume

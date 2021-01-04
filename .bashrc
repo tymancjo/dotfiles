@@ -482,6 +482,7 @@ alias webcam2="cvlc v4l2:///dev/video2 :v4l2-width=1280 :v4l2-height=720 :v4l2-f
 alias webcam3="cvlc v4l2:///dev/video3"
 alias webcam4="cvlc v4l2:///dev/video4"
 alias webcam5="cvlc v4l2:///dev/video5"
+alias setbck="sxiv -o ~/Obrazy/backgrounds/wallpapers/ | xargs -I{} cp {} ~/Obrazy/backgrounds/current_bck.jpg && feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
 
