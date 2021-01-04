@@ -112,10 +112,10 @@ bindsym $super+5 workspace 5
 bindsym $super+6 workspace 6
 
 # move focused container to workspace
-bindsym $super+Shift+1 move container to workspace number 1
-bindsym $super+Shift+2 move container to workspace number 2
-bindsym $super+Shift+3 move container to workspace number 3
-bindsym $super+Shift+4 move container to workspace number 4
+bindsym $super+Shift+1 move container to workspace $ws1
+bindsym $super+Shift+2 move container to workspace $ws2
+bindsym $super+Shift+3 move container to workspace $ws3
+bindsym $super+Shift+4 move container to workspace $ws4
 bindsym $super+Shift+5 move container to workspace number 5
 bindsym $super+Shift+6 move container to workspace number 6
 
