@@ -460,7 +460,12 @@ PROMPT_COMMAND=bash_prompt_command
 ##	which gets updated by $PROMT_COMMAND on behalf of the terminal
 bash_prompt
 unset bash_prompt
+# Some private functions
 
+tcc(){
+    # function for compiling the OLCPixelEngine
+    g++ -o "$2" "$1" -lX11 -lGL -lpthread -lpng -lstdc++fs -std=c++17
+}
 # Bash aliases by tymancjo
 alias python=python3
 alias pt=python3

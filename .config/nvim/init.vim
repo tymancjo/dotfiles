@@ -12,6 +12,7 @@
     vnoremap <A-k> :m '<-2<CR>gv=gv
 
     set number relativenumber
+    set colorcolumn=80
 
     else
     " ordinary neovim
@@ -72,6 +73,7 @@
     set fileformat=unix
 
     set cursorline
+    set colorcolumn=80
 
     set background=dark
     "colorscheme onedark
