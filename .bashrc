@@ -489,7 +489,14 @@ alias webcam4="cvlc v4l2:///dev/video4"
 alias webcam5="cvlc v4l2:///dev/video5"
 alias setbck="sxiv -o ~/Obrazy/backgrounds/wallpapers/ | xargs -I{} cp {} ~/Obrazy/backgrounds/current_bck.jpg && feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias popshop="io.elementary.appcenter"
 
+#################################
+# Path edit for android tools
+
+export PATH=$PATH:$HOME"/Soft/platform-tools"
+export ANDROID_HOME=/Soft/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 clear
 ### EOF ###
