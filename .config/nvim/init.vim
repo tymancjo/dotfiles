@@ -42,8 +42,15 @@
     Plug 'junegunn/goyo.vim'
     " Markdown live preview
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    " C++ autocomplete...
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     "Plug 'ap/vim-css-color'
     "Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'dhruvasagar/vim-table-mode'
+    Plug 'vim-scripts/DrawIt'
+
 
     call plug#end()
     syntax enable

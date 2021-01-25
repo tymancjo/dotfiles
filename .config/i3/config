@@ -16,6 +16,7 @@ exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id nextcloud
+exec --no-startup-id blueman-tray &
 
 # naming workspaces
 set $ws1 "1: main"
@@ -41,7 +42,9 @@ bindsym $super+Shift+f exec terminology -e ranger;workspace 3;focus
 
 # bindings for second monitor
 bindsym $super+p exec xrandr --output DP1 --auto --above eDP1 & feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg 
-bindsym $super+Control+p exec xrandr --output DP1 --off
+#bindsym $super+Control+p exec xrandr --output DP1 --off
+bindsym $super+$alt+p exec xrandr --output eDP1 --off & xrandr --output DP1 --auto & feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg
+bindsym $super+Control+p exec xrandr --output eDP1 --auto & xrandr --output DP1 --off & feh --bg-fill ~/Obrazy/backgrounds/current_bck.jpg
 bindsym $super+Shift+p exec arandr 
 
 
