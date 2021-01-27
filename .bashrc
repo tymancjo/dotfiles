@@ -492,6 +492,8 @@ alias setbck="sxiv -o ~/Obrazy/backgrounds/wallpapers/ | xargs -I{} cp {} ~/Obra
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias popshop="sudo io.elementary.appcenter"
 alias excel="sc-im"
+alias zegar="tty-clock -c -s -x -C7"
+alias tsk="/home/tymancjo/Soft/taskwarrior-tui/taskwarrior-tui"
 
 #################################
 # Path edit for android tools

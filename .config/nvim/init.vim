@@ -50,6 +50,7 @@
     Plug 'plasticboy/vim-markdown'
     Plug 'dhruvasagar/vim-table-mode'
     Plug 'vim-scripts/DrawIt'
+    Plug 'pechorin/any-jump.vim'
 
 
     call plug#end()
@@ -127,6 +128,7 @@
     let g:indent_guides_color_change_percent = 5
     let g:indent_guides_start_level = 2
     set ts=4 sw=4 et 
+    nmap <F5> :IndentGuidesToggle<CR>
 
     " Spell check stuff
     set spelllang=pl,en_us
